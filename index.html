@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d18">
+  <meta name="description" content="Zynqora is a beginner-friendly Data Analytics learning platform with Hinglish notes, interview preparation, quizzes and portfolio projects.">
+  <title>Zynqora — Learn Data. Build Skills. Get Career Ready.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="notes-data.js"></script>
+  <script defer src="interview-data.js"></script>
+  <script defer src="quiz-data.js"></script>
+  <script defer src="projects-data.js"></script>
+  <script defer src="products-data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Zynqora home" data-go="home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span>ZYNQORA<span class="brand-dot">.</span><small>LEARNING LAB</small></span>
+    </a>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation">☰</button>
+    <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+      <button class="nav-link active" data-go="home">Home</button>
+      <button class="nav-link" data-go="notes">Notes</button>
+      <button class="nav-link" data-go="interviews">Interviews</button>
+      <button class="nav-link" data-go="practice">Practice</button>
+      <button class="nav-link" data-go="dashboard">My progress</button>
+      <button class="nav-link" data-go="projects">Projects</button>
+      <button class="nav-link nav-products" data-go="products">Products <span class="nav-soon">SOON</span></button>
+    </nav>
+    <button class="header-search-button" data-go="search" aria-label="Open site search"><span aria-hidden="true">⌕</span><span>Search</span><kbd>/</kbd></button>
+  </header>
+
+  <main id="main">
+    <section class="view active" id="view-home" data-view="home" aria-labelledby="hero-title">
+      <div class="hero-shell container">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="eyebrow-pulse"></span> YOUR DATA CAREER STARTS HERE</div>
+          <h1 id="hero-title">Turn curiosity<br>into <span class="gradient-text">career-ready</span><br>data skills.</h1>
+          <p class="hero-lede">Learn Data. Build Skills. Get Career Ready.</p>
+          <p class="hero-subtext">A practical learning space for Excel, SQL, Python and Power BI — with simple Hinglish notes, interview practice and projects that you can explain with confidence.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" data-go="notes">Start learning <span aria-hidden="true">↗</span></button>
+            <button class="button button-secondary" data-go="interviews">Explore interview questions</button>
+          </div>
+          <div class="hero-meta"><span><i class="meta-check">✓</i> Beginner friendly</span><span><i class="meta-check">✓</i> No paid API</span><span><i class="meta-check">✓</i> Learn at your pace</span></div>
+        </div>
+        <div class="hero-art-wrap" aria-label="Animated data sphere illustration">
+          <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+          <div class="art-label label-top"><span class="label-dot blue"></span> DATA IN MOTION <b>01</b></div>
+          <canvas id="data-canvas" width="620" height="620" role="img" aria-label="A rotating sphere of connected data points"></canvas>
+          <div class="art-hud hud-left"><span class="hud-mini-label">SIGNAL</span><strong>Insights</strong><span class="hud-meter"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
+          <div class="art-hud hud-right"><span class="hud-mini-label">LEARNING MODE</span><strong><span class="status-dot"></span> Active</strong><small>Explore · Analyse · Explain</small></div>
+          <div class="art-label label-bottom"><span class="label-dot violet"></span> CONNECT THE DOTS <b>↗</b></div>
+        </div>
+      </div>
+      <div class="trust-strip"><div class="container strip-inner"><span class="strip-label">BUILD YOUR FOUNDATION</span><span class="tool-word">EXCEL</span><span class="strip-cross">✳</span><span class="tool-word">SQL</span><span class="strip-cross">✳</span><span class="tool-word">PYTHON</span><span class="strip-cross">✳</span><span class="tool-word">POWER BI</span><span class="strip-cross">✳</span><span class="tool-word">PORTFOLIO</span></div></div>
+
+      <section class="section-block container" aria-labelledby="path-title">
+        <div class="section-heading"><div><div class="eyebrow">A CLEAR PATH FOR BEGINNERS</div><h2 id="path-title">Learn one skill at a time.</h2></div><button class="text-button" data-go="dashboard">View my roadmap <span>↗</span></button></div>
+        <div class="roadmap-grid" id="home-roadmap"></div>
+      </section>
+      <section class="section-block container" aria-labelledby="popular-title">
+        <div class="section-heading"><div><div class="eyebrow">THE CORE TOOLKIT</div><h2 id="popular-title">Your next skill is closer.</h2><p class="section-intro">Short explanations, practical examples and exercises you can revisit anytime.</p></div><button class="text-button" data-go="notes">Browse all notes <span>↗</span></button></div>
+        <div class="topic-grid" id="featured-notes"></div>
+      </section>
+      <section class="feature-band container" aria-labelledby="interview-band-title">
+        <div class="feature-band-glow"></div><div class="feature-icon" aria-hidden="true">⌘</div>
+        <div><div class="eyebrow">PRACTISE WITH PURPOSE</div><h2 id="interview-band-title">Know the answer. Explain the why.</h2><p>Prepare for fresher interviews with clear explanations, practical examples and question sets organised by tool and difficulty.</p></div>
+        <button class="button button-light" data-go="interviews">Open question bank <span>↗</span></button>
+      </section>
+      <section class="section-block container" aria-labelledby="project-preview-title">
+        <div class="section-heading"><div><div class="eyebrow">LEARN BY DOING</div><h2 id="project-preview-title">Make skills visible.</h2><p class="section-intro">Project blueprints help you go from practice tables to a portfolio story.</p></div><button class="text-button" data-go="projects">Explore projects <span>↗</span></button></div>
+        <div class="project-grid" id="featured-projects"></div>
+      </section>
+    </section>
+
+    <section class="view container" id="view-notes" data-view="notes" aria-labelledby="notes-title" hidden>
+      <div class="page-intro"><div class="eyebrow">THE NOTES LIBRARY</div><h1 id="notes-title">Understand it. <span class="gradient-text">Use it.</span></h1><p>Notes in simple Hinglish with professional definitions, walkthroughs, mistakes to avoid and practice answers.</p></div>
+      <div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="notes-search" placeholder="Search notes, formulas, examples…" autocomplete="off"><kbd>/</kbd></label><label class="select-wrap"><span class="sr-only">Filter notes by category</span><select id="notes-category"><option value="all">All topics</option></select></label><span class="result-count" id="notes-count" aria-live="polite"></span></div>
+      <div class="notes-layout"><div class="notes-grid" id="notes-grid"></div><aside class="note-detail-panel" id="note-detail" aria-live="polite"><div class="detail-empty"><div class="empty-symbol">↗</div><h2>Pick a topic to begin</h2><p>Choose any note to see its explanation, code examples, common mistakes and exercises.</p></div></aside></div>
+    </section>
+
+    <section class="view container" id="view-interviews" data-view="interviews" aria-labelledby="interviews-title" hidden>
+      <div class="page-intro"><div class="eyebrow">INTERVIEW STUDIO</div><h1>Prepare to <span class="gradient-text">show your thinking.</span></h1><p>A focused question bank for freshers, with practical examples and answers you can practise out loud.</p><div class="stats-inline" id="interview-summary"></div></div>
+      <div class="toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="interview-search" placeholder="Search questions or concepts…" autocomplete="off"><kbd>/</kbd></label><label class="select-wrap"><span class="sr-only">Filter by category</span><select id="interview-category"><option value="all">All categories</option></select></label><label class="select-wrap"><span class="sr-only">Filter by difficulty</span><select id="interview-difficulty"><option value="all">All levels</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label><button class="button button-small button-secondary" id="show-bookmarks">☆ Bookmarks only</button><span class="result-count" id="interview-count" aria-live="polite"></span></div>
+      <div class="question-list" id="question-list"></div><div class="load-more-wrap"><button class="button button-secondary" id="load-more-questions">Load more questions</button></div>
+    </section>
+
+    <section class="view container" id="view-practice" data-view="practice" aria-labelledby="practice-title" hidden>
+      <div class="page-intro"><div class="eyebrow">PRACTICE LAB</div><h1>Small reps. <span class="gradient-text">Real progress.</span></h1><p>Take a short multiple-choice quiz, see feedback right away and use the explanation to strengthen your understanding.</p></div>
+      <div class="quiz-shell" id="quiz-shell"><div class="quiz-config"><div class="quiz-config-copy"><div class="quiz-mark">✳</div><h2>Build a focused practice round.</h2><p>Choose a topic and level. Questions are drawn from the site's editable quiz bank.</p></div><form id="quiz-config-form" class="quiz-form"><label>Topic<select id="quiz-topic"><option value="all">Mixed topics</option></select></label><label>Difficulty<select id="quiz-difficulty"><option value="all">All levels</option><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></label><label>Questions<select id="quiz-length"><option value="5">5 questions</option><option value="10" selected>10 questions</option><option value="15">15 questions</option></select></label><button class="button button-primary" type="submit">Start quiz <span>↗</span></button></form></div><div class="quiz-start-note"><span>✦</span> Feedback after every answer · Score saved on this device</div></div>
+    </section>
+
+    <section class="view container" id="view-dashboard" data-view="dashboard" aria-labelledby="dashboard-title" hidden>
+      <div class="page-intro"><div class="eyebrow">YOUR LEARNING SPACE</div><h1>Progress, <span class="gradient-text">not pressure.</span></h1><p>Your notes, bookmarks and quiz history are stored locally in this browser. No account is needed.</p></div>
+      <div class="dashboard-stats" id="dashboard-stats"></div>
+      <div class="dashboard-layout"><section class="dashboard-card roadmap-card"><div class="card-head"><div><div class="eyebrow">YOUR ROADMAP</div><h2>Seven stages to build your foundation</h2></div><span class="soft-tag">SELF-PACED</span></div><div id="dashboard-roadmap" class="dashboard-roadmap"></div></section><section class="dashboard-side"><div class="dashboard-card"><div class="card-head"><div><div class="eyebrow">SAVED FOR LATER</div><h2>Bookmarks</h2></div><button class="text-button" data-go="interviews">Open <span>↗</span></button></div><div id="dashboard-bookmarks" class="compact-list"></div></div><div class="dashboard-card"><div class="card-head"><div><div class="eyebrow">RECENT ROUNDS</div><h2>Quiz history</h2></div></div><div id="quiz-history" class="compact-list"></div></div></section></div>
+      <div class="dashboard-actions"><button class="button button-secondary" id="export-progress">Export my progress</button><button class="text-button danger-text" id="reset-progress">Reset local progress</button></div>
+    </section>
+
+    <section class="view container" id="view-projects" data-view="projects" aria-labelledby="projects-title" hidden>
+      <div class="page-intro"><div class="eyebrow">PROJECT WORKSHOP</div><h1>Build proof of <span class="gradient-text">your skills.</span></h1><p>Use these structured blueprints to practise the workflow and explain your work honestly. Each project is a guide — not a claim that analysis has already been done.</p></div>
+      <div class="project-grid project-grid-full" id="all-projects"></div>
+    </section>
+
+    <section class="view container" id="view-products" data-view="products" aria-labelledby="products-title" hidden>
+      <div class="page-intro"><div class="eyebrow">THE RESOURCE SHOP</div><h1>Practical tools for <span class="gradient-text">your next step.</span></h1><p>Downloadable learning resources are being prepared. Prices and purchase links can be configured in <code>products-data.js</code>; demo actions never collect payments.</p></div>
+      <div class="shop-banner"><div class="shop-icon">↗</div><div><span class="soft-tag">EARLY ACCESS</span><h2>Learn with a system, not scattered files.</h2><p>Worksheets, templates and guides designed for beginner practice.</p></div></div>
+      <div class="product-grid" id="product-grid"></div><p class="fine-print">Demo storefront only. No payment is processed on this website. Configure a real, trusted checkout provider before accepting money.</p>
+    </section>
+
+    <section class="view container" id="view-search" data-view="search" aria-labelledby="search-title" hidden>
+      <div class="page-intro"><div class="eyebrow">SEARCH ZYNQORA</div><h1>Find your next <span class="gradient-text">answer.</span></h1><p>Search across notes, interviews and project guides.</p></div>
+      <label class="search-field search-field-large"><span aria-hidden="true">⌕</span><input type="search" id="global-search" placeholder="Try “JOIN”, “missing values” or “Power BI maps”…" autocomplete="off"><kbd>Enter</kbd></label>
+      <div id="global-results" class="global-results"><div class="detail-empty"><div class="empty-symbol">⌕</div><h2>Start with a keyword</h2><p>Results from notes, interview questions and projects will appear here.</p></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand footer-brand" href="#home" data-go="home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>ZYNQORA<span class="brand-dot">.</span><small>LEARNING LAB</small></span></a><p>Learn Data. Build Skills. Get Career Ready.</p><div class="footer-links"><button data-go="notes">Notes</button><button data-go="interviews">Interview bank</button><button data-go="practice">Practice lab</button><button data-go="projects">Projects</button><button data-go="products">Resources</button></div></div><div class="container footer-bottom"><span>© <span id="current-year">2026</span> Zynqora Learning Lab</span><span>Made for learners who build one step at a time.</span><button id="back-to-top">Back to top ↑</button></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="confirm-dialog" class="confirm-dialog"><form method="dialog"><div class="eyebrow">PLEASE CONFIRM</div><h2>Reset this browser's learning data?</h2><p>Your saved notes, bookmarks and quiz history will be removed from this device.</p><div class="dialog-actions"><button class="button button-secondary" value="cancel">Cancel</button><button class="button button-danger" id="confirm-reset" value="confirm">Reset progress</button></div></form></dialog>
+</body>
+</html>
